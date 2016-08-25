@@ -6,16 +6,6 @@ import javax.swing.*;
 
 public class Utilities {
 
-    /**
-     *
-     * @param container
-     * @param myLabelLayout
-     * @param labelCaption
-     * @param x
-     * @param y
-     * @param foreColor
-     * @return
-     */
     public static JLabel LocateLabel(Container container, SpringLayout myLabelLayout, String labelCaption, int x, int y, Color foreColor) {
         JLabel myLabel = new JLabel(labelCaption);
         container.add(myLabel);
@@ -25,32 +15,10 @@ public class Utilities {
         return myLabel;
     }
 
-    /**
-     *
-     * @param container
-     * @param myLabelLayout
-     * @param labelCaption
-     * @param x
-     * @param y
-     * @return
-     */
     public static JLabel LocateLabel(Container container, SpringLayout myLabelLayout, String labelCaption, int x, int y) {
         return LocateLabel(container, myLabelLayout, labelCaption, x, y, Color.black);
     }
 
-    /**
-     *
-     * @param frame
-     * @param myButtonLayout
-     * @param btnCaption
-     * @param isEnabled
-     * @param x
-     * @param y
-     * @param w
-     * @param h
-     * @param keyPress
-     * @return
-     */
     public static JButton LocateButton(JFrame frame, SpringLayout myButtonLayout, String btnCaption, boolean isEnabled, int x, int y, int w, int h, int keyPress) {
         JButton myButton = new JButton(btnCaption);
         frame.add(myButton);
@@ -68,48 +36,14 @@ public class Utilities {
         return LocateButton(frame, myButtonLayout, btnCaption, isEnabled, x, y, w, h, 0);
     }
 
-    /**
-     *
-     * @param frame
-     * @param myButtonLayout
-     * @param btnCaption
-     * @param x
-     * @param y
-     * @param w
-     * @param h
-     * @param keyPress
-     * @return
-     */
     public static JButton LocateButton(JFrame frame, SpringLayout myButtonLayout, String btnCaption, int x, int y, int w, int h, int keyPress) {
         return LocateButton(frame, myButtonLayout, btnCaption, true, x, y, w, h, keyPress);
     }
 
-    /**
-     *
-     * @param frame
-     * @param myBtnLayout
-     * @param btnCaption
-     * @param x
-     * @param y
-     * @param w
-     * @param h
-     * @return
-     */
     public static JButton LocateButton(JFrame frame, SpringLayout myBtnLayout, String btnCaption, int x, int y, int w, int h) {
         return LocateButton(frame, myBtnLayout, btnCaption, true, x, y, w, h, 0);
     }
 
-    /**
-     *
-     * @param frame
-     * @param myTextFieldLayout
-     * @param defaultText
-     * @param x
-     * @param y
-     * @param w
-     * @param isEditable
-     * @return
-     */
     public static JTextField LocateTextField(JFrame frame, SpringLayout myTextFieldLayout, String defaultText, int x, int y, int w, boolean isEditable) {
         JTextField myTextField = new JTextField(defaultText, w);
         frame.add(myTextField);
@@ -119,17 +53,6 @@ public class Utilities {
         return myTextField;
     }
 
-    /**
-     *
-     * @param frame
-     * @param myTextAreaLayout
-     * @param defaultText
-     * @param x
-     * @param y
-     * @param w
-     * @param h
-     * @return
-     */
     public static JTextArea LocateTextArea(JFrame frame, SpringLayout myTextAreaLayout, String defaultText, int x, int y, int w, int h) {
         JTextArea myTextArea = new JTextArea(defaultText);
         myTextArea.setLineWrap(true);
@@ -144,15 +67,6 @@ public class Utilities {
         return myTextArea;
     }
 
-    /**
-     *
-     * @param frame
-     * @param myComboBoxLayout
-     * @param items
-     * @param x
-     * @param y
-     * @return
-     */
     public static JComboBox LocateComboBox(JFrame frame, SpringLayout myComboBoxLayout, String[] items, int x, int y) {
         JComboBox myComboBox = new JComboBox(items);
         frame.add(myComboBox);
@@ -161,15 +75,6 @@ public class Utilities {
         return myComboBox;
     }
 
-    /**
-     *
-     * @param f
-     * @param myJSpinnerLayout
-     * @param x
-     * @param y
-     * @param w
-     * @return
-     */
     public static JSpinner LocateJSpinner(JFrame f, SpringLayout myJSpinnerLayout, int x, int y, int w) {
         JSpinner myJSpinner = new JSpinner();
         f.add(myJSpinner);
@@ -179,16 +84,6 @@ public class Utilities {
         return myJSpinner;
     }
 
-    /**
-     *
-     * @param f
-     * @param myRadioButtonLayout
-     * @param caption
-     * @param x
-     * @param y
-     * @param selected
-     * @return
-     */
     public static JRadioButton LocateJRadioButton(JFrame f, SpringLayout myRadioButtonLayout, String caption, int x, int y, boolean selected) {
         JRadioButton myRdoBtn = new JRadioButton(caption);
         f.add(myRdoBtn);
@@ -199,23 +94,10 @@ public class Utilities {
         return myRdoBtn;
     }
 
-    /**
-     *
-     * @param submittedAns
-     * @param correctAns
-     * @return
-     */
     public static boolean isAnswerCorrect(int submittedAns, int correctAns) {
         return submittedAns == correctAns;
     }
 
-    /**
-     *
-     * @param num1
-     * @param op
-     * @param num2
-     * @return
-     */
     public static int getAnswer(int num1, char op, int num2) {
         int ans = 0;
         switch(op) {
@@ -236,9 +118,9 @@ public class Utilities {
     }
 
     /**
-     *
-     * @param obj
-     * @return
+     * Converts an object directory to an integer
+     * @param obj The object to convert
+     * @return The integer
      */
     public static int convertObjToInt(Object obj) {
         return Integer.parseInt(obj.toString());
